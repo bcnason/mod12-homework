@@ -24,3 +24,16 @@ C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_H
 C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.g.resources
 C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.Properties.Resources.resources
 C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.csproj.GenerateResource.Cache
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\bin\Debug\Mod12_Homework.exe.config
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.exe
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.pdb
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\bin\Debug\Mod12_Homework.exe
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\bin\Debug\Mod12_Homework.pdb
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.csprojResolveAssemblyReference.cache
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\MainWindow.baml
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\MainWindow.g.cs
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\App.g.cs
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework_MarkupCompile.cache
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.g.resources
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.Properties.Resources.resources
+C:\Users\bnason\Box Sync\Github\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.csproj.GenerateResource.Cache

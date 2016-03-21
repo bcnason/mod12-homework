@@ -29,12 +29,12 @@ namespace Mod12_Homework
 
         private async void btnWriteFile_Click(object sender, RoutedEventArgs e)
         {
-           await WriteFileAsync();
+            await WriteFileAsync();
         }
 
-        private void btnReadFile_Click(object sender, RoutedEventArgs e)
+        private async void btnReadFile_Click(object sender, RoutedEventArgs e)
         {
-            ReadFile();
+            await ReadFileAsync();
         }
 
         public async Task WriteFileAsync()
@@ -42,62 +42,69 @@ namespace Mod12_Homework
             string filePath = @"SampleFile.txt";
             string text = txtContents.Text;
 
-           await WriteTextAsync(filePath, text);
+            await Task.Run(() => WriteTextAsync(filePath, text));
         }
 
         private async Task WriteTextAsync(string filePath, string text)
         {
          
             byte[] encodedText = Encoding.Unicode.GetBytes(text);
-            var sourceStream = new FileStream(filePath,
-                       FileMode.Append, FileAccess.Write, FileShare.None,
-                       bufferSize: 4096);
 
-         
-            await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
- 
+
+
+            using (FileStream sourceStream = new FileStream(filePath,
+                       FileMode.Append, FileAccess.Write, FileShare.None,
+                       4096, true))
+            {
+                //System.Threading.Thread.Sleep(3000); //simulate long running process: uncomment to test
+                await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
+            };
         }
 
-        public void ReadFile()
+        public async Task ReadFileAsync()
         {
             string filePath = @"SampleFile.txt";
 
             if (File.Exists(filePath) == false)
             {
                 MessageBox.Show(filePath + " not found", "File Error", MessageBoxButton.OK);
+
             }
             else
             {
                 try
                 {
-                    string text = ReadText(filePath);
-                    txtContents.Text = text;
+                    Task<string> text = Task.Run<string>(() => ReadTextAsync(filePath));
+                    txtContents.Text = await text;
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
                 }
             }
+            
         }
 
-        private string ReadText(string filePath)
+        private async Task<string> ReadTextAsync(string filePath)
         {
-            using (FileStream sourceStream = new FileStream(filePath,
-                FileMode.Open, FileAccess.Read, FileShare.Read,
-                bufferSize: 4096))
-            {
-                StringBuilder sb = new StringBuilder();
-
-                byte[] buffer = new byte[0x1000];
-                int numRead;
-                while ((numRead = sourceStream.Read(buffer, 0, buffer.Length)) != 0)
+                using (FileStream sourceStream = new FileStream(filePath,
+                    FileMode.Open, FileAccess.Read, FileShare.Read,
+                    4096, true))
                 {
-                    string text = Encoding.Unicode.GetString(buffer, 0, numRead);
-                    sb.Append(text);
+                    StringBuilder sb = new StringBuilder();
+
+                    byte[] buffer = new byte[0x1000];
+                    int numRead;
+                    while ((numRead = await sourceStream.ReadAsync(buffer, 0, buffer.Length)) != 0)
+                    {
+                        string text = Encoding.Unicode.GetString(buffer, 0, numRead);
+                        sb.Append(text);
+                    }
+
+                    //System.Threading.Thread.Sleep(3000); //simulate long running process - uncomment to test
+                    return sb.ToString();
                 }
 
-                return sb.ToString();
-            }
         }
     }
 }
