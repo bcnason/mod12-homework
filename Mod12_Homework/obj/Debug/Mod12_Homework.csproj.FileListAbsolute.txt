@@ -11,3 +11,16 @@ C:\Users\gerryo\Documents\EdX Project\Demo Files\Mod12_Homework\Mod12_Homework\o
 C:\Users\gerryo\Documents\EdX Project\Demo Files\Mod12_Homework\Mod12_Homework\obj\Debug\Mod12_Homework.exe
 C:\Users\gerryo\Documents\EdX Project\Demo Files\Mod12_Homework\Mod12_Homework\obj\Debug\Mod12_Homework.pdb
 C:\Users\gerryo\Documents\EdX Project\Demo Files\Mod12_Homework\Mod12_Homework\obj\Debug\Mod12_Homework.csprojResolveAssemblyReference.cache
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\bin\Debug\Mod12_Homework.exe.config
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.exe
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.pdb
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\bin\Debug\Mod12_Homework.exe
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\bin\Debug\Mod12_Homework.pdb
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.csprojResolveAssemblyReference.cache
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\MainWindow.baml
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\MainWindow.g.cs
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\App.g.cs
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework_MarkupCompile.cache
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.g.resources
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.Properties.Resources.resources
+C:\Users\IEUser\Documents\GitHub\mod12-homework\Mod12_Homework\obj\Debug\Mod12_Homework.csproj.GenerateResource.Cache

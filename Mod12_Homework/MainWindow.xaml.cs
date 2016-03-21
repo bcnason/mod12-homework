@@ -27,9 +27,9 @@ namespace Mod12_Homework
             InitializeComponent();
         }
 
-        private void btnWriteFile_Click(object sender, RoutedEventArgs e)
+        private async void btnWriteFile_Click(object sender, RoutedEventArgs e)
         {
-           WriteFile();
+           await WriteFileAsync();
         }
 
         private void btnReadFile_Click(object sender, RoutedEventArgs e)
@@ -37,24 +37,25 @@ namespace Mod12_Homework
             ReadFile();
         }
 
-        public void WriteFile()
+        public async Task WriteFileAsync()
         {
             string filePath = @"SampleFile.txt";
             string text = txtContents.Text;
 
-            WriteText(filePath, text);
+           await WriteTextAsync(filePath, text);
         }
 
-        private void WriteText(string filePath, string text)
+        private async Task WriteTextAsync(string filePath, string text)
         {
+         
             byte[] encodedText = Encoding.Unicode.GetBytes(text);
+            var sourceStream = new FileStream(filePath,
+                       FileMode.Append, FileAccess.Write, FileShare.None,
+                       bufferSize: 4096);
 
-            using (FileStream sourceStream = new FileStream(filePath,
-                FileMode.Append, FileAccess.Write, FileShare.None,
-                bufferSize: 4096))
-            {
-                sourceStream.Write(encodedText, 0, encodedText.Length);
-            };
+         
+            await sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
+ 
         }
 
         public void ReadFile()
